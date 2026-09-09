@@ -2,6 +2,9 @@ package Inheritance;
 
 public class Main {
     public static void main(String[] args) {
+
+        // creat different types of employee objects
+        // each class inherits from the basic employee information
         SalariedEmployee employee1 = new SalariedEmployee("Joe", "Jones", "111-11-1111", 2500);
 
         HourlyEmployee employee2 = new HourlyEmployee("Stephanie", "Smith", "222-22-2222", 25, 32);
@@ -16,6 +19,7 @@ public class Main {
 
         CommissionEmployee employee7 = new CommissionEmployee("Mahnaz", "Vaziri", "777-77-7777", 0.22, 40000);
 
+        //display the information of the employees
         System.out.println("Employee 1:");
         System.out.println(employee1.getFirstName() + " " + employee1.getLastName());
         System.out.println("Social Security Number: " + employee1.getSocialSecurityNumber());
