@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "<u>course : Course</u>" as c{
+    courseName - "Advanced Software Engineering"
+}
+
+object "<u>instructor1 : Instructor</u>" as i1{
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "<u>instructor2 : Instructor</u>" as i2{
+    firstName = "Tingting"
+    lastName = "Chen"
+    officeNumber = "8-14"
+}
+
+object "<u>textbook1 : Textbook</u>" as t1{
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+object "<u>textbook2 : Textbook</u>" as t2{
+    title = "Design Patterns: Elements of Reusable Object-Oriented Software"
+    author = "Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides"
+    publisher = "Addison-Wesley Professional"
+}
+
+c -- i1 : instructor1
+c -- i2 : instructor2
+c -- t1 : textbook1
+c -- t2 : textbook2
+@enduml

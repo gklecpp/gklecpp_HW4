@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Payable{
+    + calculatePayment() : double
+    + getPayeeName() : String
+}
+
+class Freelancer{
+    -  firstName : String
+    -  lastName : String
+    -  hourlyRate : double
+    -  hoursWorked : double
+
+    + Freelancer(firstName : String, lastName : String, hourlyRate : double, hoursWorked : double)
+    + getFirstName() : String
+    + getLastName() : String
+    + getHourlyRate() : double
+    + getHoursWorked() : double
+    + setFirstName(firstName : String) : void
+    + setLastName(lastName : String) : void
+    + setHourlyRate(hourlyRate : double) : void
+    + setHoursWorked(hoursWorked  : double) : void
+    + getPayeeName() : String
+    + calculatePayment() : double
+    + print() : void
+}
+
+class VendorInvoice{
+    - vendorName : String
+    - invoiceNumber : String
+    - amountDue : double
+
+    + VendorInvoice(vendorName : String, invoiceNumber : String, amountDue : double)
+    + getVendorName() : String
+    + getInvoiceNumber() : String
+    + getAmountDue() : double
+    + setVendorName(vendorName : String) : void
+    + setInvoiceNumber(invoiceNumber : String) : void
+    + setAmountDue(amountDue : double) : void
+    + calculatePayment() : double
+    + getPayeeName() : string
+    + print() : void
+}
+
+Payable <|.. Freelancer
+Payable <|.. VendorInvoice
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "<u>ships0 : Ship</u>" as s0{
+    name = "USS Midway"
+    built = "1943"
+}
+
+object "<u>ships1 : CruiseShip</u>" as s1{
+    name = "Icon of the Seas"
+    built = "2022"
+    maxPassengers = 5610
+}
+
+object "<u>ships2 : CargoShip</u>" as s2{
+    name = "HMM Algeciras"
+    built = "2020"
+    cargoCapacity = 23964
+}
+@enduml
